@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%=full_title(yield(:title))  %></title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application", media: "all",
+                          "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <%= render "layouts/admin/shim" %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="page-top">
+  <%= render "layouts/admin/header" %>
+  <div id="wrapper">
+    <%= render "layouts/admin/sidebar" %>
+    <div id="content-wrapper">
+      <div class="container-fluid">
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <% end %>
+        <%= yield %>
+      </div>
+      <%= render "layouts/admin/footer" %>
+    </div>
+  </div>
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+</body>
+</html>
