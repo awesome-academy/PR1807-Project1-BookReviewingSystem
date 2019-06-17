@@ -1,0 +1,29 @@
+<% if logged_in? %>
+  <ul class="sidebar navbar-nav">
+    <li class="nav-item active">
+      <%= link_to "#" , class: "nav-link" do %>
+        <%= content_tag :i, "", class: "fa fa-tachometer"%> <span>Dashboard</span>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+       <i class="fa fa-bar-chart"></i>
+        <span>Charts</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fa fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+    <li class="nav-item">
+      <%= link_to "#" , class: "nav-link" do %>
+        <%= content_tag :i, "", class: "fa fa-whatsapp"%> <span>Contact</span>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "", class: "nav-link" do %>
+        <%= content_tag :i,"", class: "fa fa-user"%> Users
+      <% end %>
+    </li>
+  </ul>
+<% end -%>

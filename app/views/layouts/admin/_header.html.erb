@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+  <a class="navbar-brand mr-1" href="#">Book Review System #iO</a>
+  <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <i class="fa fa-bars"></i>
+  </button>
+    <ul class="navbar-nav ml-auto ">
+      <% if logged_in? %>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <%= link_to admin_user_path(current_user), class: "dropdown-item" do %>
+              <%= content_tag :i , "", :class => "fa fa-user"%> Profile
+            <% end %>
+            <%= link_to edit_admin_user_path(current_user), class: "dropdown-item" do %>
+              <%= content_tag :i, "", class: "fa fa-cog" %> Setting
+            <% end %>
+            <div class="dropdown-divider"></div>
+            <%= link_to admin_logout_path, method: :delete, class: "dropdown-item" do %>
+              <%= content_tag :i , "", :class => "fa fa-sign-out" %> Logout
+            <% end %>
+          </div>
+        </li>
+      <% else %>
+        <li><%= link_to "Login", admin_login_path, class: "btn btn-danger" %></li>
+        <% end %>
+    </ul>
+</nav>
+
