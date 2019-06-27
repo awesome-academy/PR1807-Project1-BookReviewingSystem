@@ -5,4 +5,13 @@
   <p class="text-center">
      Bookreview là dự án phi lợi nhuận,nhằm mục đích chia sẻ sách và đọc truyện online miễn phí vì cộng đồng.
   </p>
+  <ul class="row">
+    <% @cates.each do |cate| %>
+      <li class="col-xs-12 col-md-4 col-sm-6">
+        <i class="fa fa-folder-open"></i><%= cate.title %>
+      </li>
+    <% end %>
+  </ul>
 </div>
+
+
