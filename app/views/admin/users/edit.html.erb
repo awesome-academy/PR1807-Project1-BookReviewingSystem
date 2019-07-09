@@ -1,3 +1,5 @@
+<% provide(:title, "Edit user") %>
+<% provide(:button_text, "Save changes") %>
 <div class="container-fluid bg-light py-3">
   <div class="row">
     <div class="col-md-6 mx-auto">
@@ -5,7 +7,7 @@
         <h3 class="text-center mb-4"><%= yield(:title)%></h3>
 
         <fieldset>
-          <%= form_for @user  do |f| %>
+          <%= form_for [:admin, @user] do |f| %>
             <div class="form-group ">
               <%= f.text_field :name, class: "form-control input-lg", placeholder: "Your Name" %>
             </div>
@@ -42,7 +44,7 @@
                       <%= f.check_box :remove_image %>
                     <% end %>
                   </div>
-                <% end %>
+                <%end %>
               </div>
             </div>
             <%= f.submit yield(:button_text), class: "btn btn-lg btn-primary btn-block" %>
@@ -52,3 +54,4 @@
     </div>
   </div>
 </div>
+

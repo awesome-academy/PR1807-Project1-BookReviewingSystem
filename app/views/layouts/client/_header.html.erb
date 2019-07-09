@@ -7,18 +7,20 @@
     </form>
 
     <% if logged_in? %>
-      <%= link_to logout_path, :method => :delete do %>
-        <%= content_tag :i, "", :class => "icon-logout"%> Logout
-      <%end%>
-      <%= link_to current_user  do %>
-        <%= content_tag :i, "", :class => "icon-user"%> <%= current_user.name%>
-      <%end%>
+      <div class="box-user">
+        <%= link_to current_user  do %>
+          <%= content_tag :i, "", :class => "icon-user"%> <%= current_user.name %>
+        <% end %> |
+        <%= link_to logout_path, :method => :delete do %>
+        <%= content_tag :i, "", class: "fa fa-sign-out" %> Logout
+        <% end %>
+      </div>
     <% else %>
       <div class="boxreg">
       <%= link_to "Sign up", signup_path , class: "btn btn-primary" %>
-      <%= link_to "Sign in", "/" , class: "btn btn-danger" %>
+      <%= link_to "Sign in", login_path , class: "btn btn-danger" %>
     </div>
-    <% end -%>
+    <% end %>
   </nav>
 </div>
 

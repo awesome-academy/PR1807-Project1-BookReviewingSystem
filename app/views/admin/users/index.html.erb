@@ -1,0 +1,27 @@
+<% provide(:title, 'All users') %>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Avatar</th>
+      <th scope="col">Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <th scope="row"><%= image_tag(user.image.url, alt: 'Image', class: "indeximgadmin") if user.image? %></th>
+      <td><%= link_to user.name, admin_user_path(user) %></td>
+      <td>
+        <%= link_to  admin_user_path(user), method: :delete, data: { confirm: "You sure?" } do %>
+          <%= content_tag :i, "" , class: "fa fa-trash"%>
+        <% end %>
+        |
+        <%= link_to edit_admin_user_path(user) do%>
+          <%= content_tag :i, "", class: "fa fa-wrench"%>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
