@@ -1,0 +1,20 @@
+<tbody>
+  <tr>
+    <td><i class="fa fa-fighter-jet"></i><%= link_to book.title , admin_book_path(book) %></td>
+    <td><%= image_tag(book.image.url, class: "indeximgbook") if book.image? %></td>
+    <td><%= truncate(book.description , length: 55, omission: '... (còn nữa)') %></td>
+    <td><%= book.cate.title %></td>
+    <td><%= book.author %></td>
+    <td colspan="2">
+      <% if current_user.admin? %>
+        <%= link_to  admin_book_path(book), method: :delete, data: { confirm: "You sure?" } do %>
+          <%= content_tag :i, "" , class: "fa fa-trash" %>
+        <% end %>
+        |
+        <%= link_to edit_admin_book_path(book) do %>
+          <%= content_tag :i, "", class: "fa fa-wrench" %>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+</tbody>

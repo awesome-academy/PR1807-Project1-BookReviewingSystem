@@ -1,6 +1,6 @@
-<%= link_to new_admin_cate_path , class: "caption" do%>
-  <%= content_tag :i, "", class: "fa fa-plus-circle"%> Add Category
-<%end%>
+<%= link_to new_admin_cate_path , class: "caption" do %>
+  <%= content_tag :i, "", class: "fa fa-plus-circle" %> Add Category
+<% end %>
 <br>
 <br>
 <table class="table table-striped">
@@ -10,20 +10,5 @@
       <th colspan="2"></th>
     </tr>
   </thead>
-  <% @cates.each do |cate| %>
-  <tbody>
-    <tr>
-      <td><i class="fa fa-fighter-jet"></i> <%= cate.title %></td>
-      <td colspan="2">
-        <%= link_to  admin_cate_path(cate), method: :delete, data: { confirm: "You sure?" } do %>
-          <%= content_tag :i, "" , class: "fa fa-trash"%>
-        <% end %>
-        |
-        <%= link_to edit_admin_cate_path(cate) do%>
-          <%= content_tag :i, "", class: "fa fa-wrench"%>
-        <% end %>
-      </td>
-    </tr>
-  </tbody>
-  <% end %>
+  <%= render @cates %>
 </table>

@@ -14,8 +14,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bcrypt',         '~> 3.1.12'
-gem 'carrierwave', '~> 1.0'
-
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'ckeditor'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

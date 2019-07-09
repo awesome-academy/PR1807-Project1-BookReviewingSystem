@@ -1,17 +1,12 @@
-<div class="alert alert-success" role="alert"><b>NÊN</b> sao chép, chia sẻ, <b>KHÔNG NÊN</b> thương mại hoá.</div>
+<div class="alert alert-success" role="alert"><b>CODE</b> cho muôn đời sau.</div>
 
 <div class="main-index">
   <h2 class="text-center">THƯ VIỆN SÁCH MIỄN PHÍ</h2>
   <p class="text-center">
-     Bookreview là dự án phi lợi nhuận,nhằm mục đích chia sẻ sách và đọc truyện online miễn phí vì cộng đồng.
+     Bookreview là dự án phi lợi nhuận,nhằm mục đích chia sẻ sách miễn phí cho sinh viên công nghệ.
   </p>
   <ul class="row">
-    <% @cates.each do |cate| %>
-      <li class="col-xs-12 col-md-4 col-sm-6">
-        <i class="fa fa-folder-open"></i><%= cate.title %>
-      </li>
-    <% end %>
+    <%= render @cates %>
   </ul>
+  <%= image_tag("coder.png", alt: 'Image',  class: "image-bg-index") %>
 </div>
-
-

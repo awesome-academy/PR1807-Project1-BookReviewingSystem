@@ -1,0 +1,13 @@
+<div class="row thong_tin_ebook">
+    <div class="col-md-4 cover">
+      <%= image_tag(@book.image.url, alt: 'Image') if @book.image? %>
+    </div>
+    <div class="col-md-8">
+      <h1 class="ebook_title text-primary"> <%= @book.title %> </h1>
+      <h5 class="">Tác giả : <%= @book.author %> </h5>
+      <h5 class="">Thể loại : <%= @book.cate.title %> </h5>
+    </div>
+</div>
+<hr>
+<h4>Danh sách các chương</h4>
+<hr>

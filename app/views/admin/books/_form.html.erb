@@ -1,0 +1,53 @@
+<%= form_for [:admin, @book], html: {class: "form-horizontal"}  do |f| %>
+  <div class="form-body">
+    <div class="form-group">
+      <%= f.label :title, class: "col-md-4 control-label" %>
+      <div class="col-md-12">
+         <%= f.text_field :title, class: "form-control input-circle",
+                          placeholder: "Title Post" %>
+      </div>
+    </div>
+    <div class ="form-group">
+      <%= f.label :image, class: "col-md-4 control-label" %>
+      <div class="col-md-4">
+        <div class="input-group">
+          <%= f.file_field :image %>
+          <%= f.hidden_field :image_cache %>
+        </div>
+        <% if @book.image? %>
+          <%= image_tag @book.image.url %>
+          <div>
+            <%= label_tag :remove_image do %>
+              Remove image
+              <%= f.check_box :remove_image %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :description, class: "col-md-4 control-label" %>
+      <div class="col-md-12">
+         <%= f.cktext_area :description, class: "form-control input-circle",
+                           placeholder: "Write Description..." %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :author, class: "col-md-4 control-label" %>
+      <div class="col-md-12">
+         <%= f.text_field :author ,class: "form-control input-circle",
+                          placeholder: "Author" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :cate_id, class: "col-md-4 control-label" %>
+      <div class="col-md-12">
+      <%= f.select :cate_id, Cate.all.collect {|p| [ p.title, p.id ] },
+        { prompt: "Select..." }, { class: "form-control", required: true } %>
+      </div>
+    </div>
+    <div class="form-actions col-md-4">
+      <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

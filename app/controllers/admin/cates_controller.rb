@@ -1,6 +1,5 @@
 class Admin::CatesController < ApplicationController
   layout "admin"
-
   def new
     @cate = Cate.new
   end
@@ -10,11 +9,11 @@ class Admin::CatesController < ApplicationController
   end
 
   def show
-    @cate = Cate.find(params[:id])
+    @cate = Cate.find params[:id]
   end
 
   def create
-    @cate = Cate.new(cate_params)
+    @cate = Cate.new cate_params
     if @cate.save
       flash[:success] = "Oh vừa có cái gì đó mới xuất hiện >`<"
       redirect_to admin_cates_path @cate
@@ -24,16 +23,16 @@ class Admin::CatesController < ApplicationController
   end
 
   def edit
-    @cate = Cate.find(params[:id])
+    @cate = Cate.find params[:id]
   end
 
   def update
-    @cate = Cate.find(params[:id])
-    if @cate.update_attributes(cate_params)
+    @cate = Cate.find params[:id]
+    if @cate.update_attributes cate_params
       flash[:success] = "ú oà biến hình thành công rồi :)) "
       redirect_to admin_cates_path @cate
     else
-      render 'edit'
+      render "edit"
     end
   end
 
@@ -46,6 +45,6 @@ class Admin::CatesController < ApplicationController
   private
 
   def cate_params
-    params.require(:cate).permit(:title)
+    params.require(:cate).permit :title
   end
 end

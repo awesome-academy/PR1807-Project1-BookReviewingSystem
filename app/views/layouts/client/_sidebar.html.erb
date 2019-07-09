@@ -1,0 +1,16 @@
+<div class="col-md-3 sidebar-colection">
+  <div class="card ">
+    <div class="card-header ">
+      Thể loại sách
+    </div>
+    <div class="card-body">
+      <ul>
+        <% Cate.all.each do |cate| %>
+          <li>
+            <i class="fa fa-book"></i> <%= link_to cate.title, cate_path(cate) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
