@@ -15,7 +15,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find params[:id]
     if @user.update_attributes user_params
       flash[:success] = "Profile admin updated"
       redirect_to admin_user_path @user
@@ -27,7 +27,8 @@ class Admin::UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit :name, :email, :password,
-        :password_confirmation, :mobile, :address, :birthdate, :image, :remove_image, :image_cache
+        :password_confirmation, :mobile, :address, :birthdate, :image,
+        :remove_image, :image_cache
     end
        # Confirms a logged-in user.
     def logged_in_user

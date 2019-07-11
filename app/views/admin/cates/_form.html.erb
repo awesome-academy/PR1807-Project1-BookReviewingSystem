@@ -1,14 +1,13 @@
-<%= form_for [:admin, @cate], :html  => {:class => "form-horizontal"}  do |f| %>
+<%= form_for [:admin, @cate], html: {class: "form-horizontal"}  do |f| %>
   <div class="form-body">
     <div class="form-group">
-      <%= f.label :title , :class => "col-md-4 control-label"%>
+      <%= f.label :title , :class => "col-md-4 control-label" %>
       <div class="col-md-4">
-         <%= f.text_field :title ,:class => "form-control input-circle", :placeholder => "Title cate" %>
+         <%= f.text_field :title, class: "form-control input-circle", placeholder: "Title cate" %>
       </div>
     </div>
     <div class="form-actions col-md-4">
       <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>
     </div>
   </div>
-<%end%>
-
+<% end %>

@@ -2,7 +2,7 @@
   <ul class="sidebar navbar-nav">
     <li class="nav-item active">
       <%= link_to admin_root_path , class: "nav-link" do %>
-        <%= content_tag :i, "", class: "fa fa-tachometer"%> <span>Dashboard</span>
+        <%= content_tag :i, "", class: "fa fa-tachometer" %> <span>Dashboard</span>
       <% end %>
     </li>
     <li class="nav-item">
@@ -11,18 +11,23 @@
         <span>Charts</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <i class="fa fa-table"></i>
-        <span>Tables</span></a>
+      <%= link_to admin_books_path , class: "nav-link" do %>
+        <%= content_tag :i, "", class: "fa fa-book" %> <span>Books</span>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to admin_chapters_path , class: "nav-link" do %>
+        <%= content_tag :i, "", class: "fa fa-file" %> <span>Chapter</span>
+      <% end %>
     </li>
     <li class="nav-item">
       <%= link_to admin_cates_path , class: "nav-link" do %>
-        <%= content_tag :i, "", class: "fa fa-folder"%> <span>Categories</span>
+        <%= content_tag :i, "", class: "fa fa-folder" %> <span>Categories</span>
       <% end %>
     </li>
     <li class="nav-item">
       <%= link_to admin_users_path, class: "nav-link" do %>
-        <%= content_tag :i,"", class: "fa fa-user"%> Users
+        <%= content_tag :i,"", class: "fa fa-user" %> Users
       <% end %>
     </li>
   </ul>

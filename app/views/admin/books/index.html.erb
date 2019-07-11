@@ -1,0 +1,20 @@
+<%= link_to new_admin_book_path , class: "caption" do %>
+  <%= content_tag :i, "", class: "fa fa-plus-circle"%> Add Book
+<% end %>
+<br>
+<br>
+<h6>Đã có ngần này cuốn sách rồi <i class="fa fa-level-down"></i></h6>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Ảnh bìa</th>
+      <th>Mô tả ngắn</th>
+      <th>Danh mục sách</th>
+      <th>Tác giả</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <%= render @books %>
+</table>

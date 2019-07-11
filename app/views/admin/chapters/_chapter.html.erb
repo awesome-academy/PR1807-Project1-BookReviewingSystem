@@ -1,0 +1,18 @@
+<tbody>
+  <tr>
+    <td><i class="fa fa-fighter-jet"></i><%= chapter.title  %></td>
+    <td><%= truncate(chapter.content , length: 55, omission: '... (còn nữa)') %></td>
+    <td><%= chapter.book.title %></td>
+    <td colspan="2">
+      <% if current_user.admin? %>
+        <%= link_to  admin_chapter_path(chapter), method: :delete, data: { confirm: "You sure?" } do %>
+          <%= content_tag :i, "" , class: "fa fa-trash" %>
+        <% end %>
+        |
+        <%= link_to edit_admin_chapter_path(chapter) do %>
+          <%= content_tag :i, "", class: "fa fa-wrench" %>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+</tbody>
