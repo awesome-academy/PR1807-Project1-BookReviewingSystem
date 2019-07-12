@@ -15,7 +15,7 @@ class Admin::BooksController < ApplicationController
   def create
     @book = Book.new book_params
     if @book.save
-      flash[:success] = "Một chiếc bạn sách vừa được thêm mới rồi kìa"
+      flash[:success] = I18n.t "controllers.admin.books.create"
       redirect_to admin_books_path @book
     else
       render "new"
@@ -29,7 +29,7 @@ class Admin::BooksController < ApplicationController
   def update
     @book = Book.find params[:id]
     if @book.update_attributes book_params
-      flash[:success] = "Biến đổi gen 1 chiếc sách thành công"
+      flash[:success] = I18n.t "controllers.admin.books.update"
       redirect_to admin_books_path @book
     else
       render "edit"
@@ -38,7 +38,7 @@ class Admin::BooksController < ApplicationController
 
   def destroy
     Book.find(params[:id]).destroy
-    flash[:success] = "Cuốn sách bay màu rồi ông giáo ạ"
+    flash[:success] = I18n.t "controllers.admin.books.destroy"
     redirect_to admin_books_url
   end
 

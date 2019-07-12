@@ -1,0 +1,164 @@
+vi:
+  controllers:
+    admin:
+      users:
+        update: "Cập nhật thông tin cá nhân thành công !"
+        logged: "Vui lòng đăng nhập !"
+      sessions:
+        success: "Chào mừng đến với Book review system!"
+        fail: "Địa chỉ email hoặc mật khẩu không chính xác."
+      chapters:
+        create: "Chapter được tạo thành công !"
+        update: "Chapter được cập nhật thành công !"
+        destroy: "Chapter đã được xoá !"
+      cates:
+        create: "Category được tạo thành công !"
+        update: "Category được cập nhật thành công !"
+        destroy: "Category đã được xoá !"
+      books:
+        create: "Book được tạo thành công !"
+        update: "Book được cập nhật thành công !"
+        destroy: "Book đã được xoá !"
+    sessions:
+      success: "Chào mừng đến với Book review system!"
+      fail: "Địa chỉ email hoặc mật khẩu không chính xác."
+  admin:
+    users:
+      show:
+        birth-date: "Sinh nhật"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+      edit:
+        button-text: "Lưu"
+        title: "Cập nhật thông tin"
+        placeholder-name: "Vui lòng nhập họ tên..."
+        placeholder-email: "Vui lòng nhập địa chỉ email..."
+        placeholder-phone: "Nhập số điện thoại..."
+        placeholder-address: "nhập địa chỉ..."
+        placeholder-password: "nhập mật khẩu"
+        placeholder-repassword: "xác nhận lại mật khẩu"
+        remove-image: "Xoá ảnh"
+      index:
+        title: "Tất cả người dùng"
+        avatar: "Ảnh đại diện"
+        name: "Họ Tên"
+    sessions:
+      new:
+        title: "Đăng nhập"
+        placeholder-email: "Vui lòng nhập địa chỉ email..."
+        placeholder-password: "nhập mật khẩu"
+        text-remember: "lưu mật khẩu trên trình duyệt"
+    chapters:
+      index:
+        add-chapter: "Thêm chương cho sách"
+        title: "Tiêu đề chương"
+        content: "Nội dung"
+        title-book: "Tên sách"
+      new:
+        title: "Thêm chương sách"
+        button-text: "Thêm mới"
+      edit:
+        title: "Sửa chương sách"
+        button-text: "Lưu"
+      form:
+        select: "Chọn..."
+    cates:
+      index:
+        add-cate: "Thêm danh mục sách"
+        title: "Tiêu đề danh mục"
+      new:
+        title: "Thêm Danh mục"
+        button-text: "Thêm mới"
+      edit:
+        title: "Sửa danh mục"
+        button-text: "Lưu"
+    books:
+      index:
+        add-book: "Thêm mới"
+        title: "Tên sách"
+        image: "Ảnh bìa"
+        desc: "Mô tả ngắn"
+        category: "Danh mục"
+        author: "Tác giả"
+      show:
+        author: "Tác giả"
+        category: "Thể loại"
+        list-chapter: "Danh sách chương"
+      new:
+        title: "Thêm Sách"
+        button-text: "Thêm mới"
+      edit:
+        title: "Cập nhật Sách"
+        button-text: "Lưu"
+    book_pages:
+      home:
+        welcome: "Chào mừng đến với hệ thống quản lý của BookReview"
+  layouts:
+    client:
+      header:
+        placeholder-search: "Nhập từ khoá tìm kiếm..."
+        text-search: "Tìm Kiếm"
+        choose-language: "Chọn ngôn ngữ"
+        text-logout: "Đăng xuất"
+      sidebar:
+        title-sidebar: "Thể loại sách"
+      footer:
+        copyright: "2019 © bản quyền thuộc về haotruonq"
+    admin:
+      header:
+        profile: "Trang cá nhân"
+        setting:  "Sửa thông tin"
+        logout: "Đăng xuất"
+        login: "Đăng nhập"
+        choose-language: "Chọn ngôn ngữ"
+      sidebar:
+        dashboard: "Trang chủ"
+        charts: "Thống kê"
+        books: "Sách"
+        chapters: "Chương sách"
+        categories: "Danh mục sách"
+        users: "Người dùng"
+  books:
+    show:
+      author: "Tác giả"
+      cate: "Thể loại sách"
+      view: "Lượt xem"
+      list-pages: "Danh sách các chương"
+  cates:
+    index:
+      alert: "<b>CODE</b> cho muôn đời sau."
+      title-slogan: "THƯ VIỆN SÁCH MIỄN PHÍ"
+      sub-slogan: "Bookreview là dự án phi lợi nhuận,nhằm mục đích chia sẻ
+        sách miễn phí cho sinh viên công nghệ."
+  users:
+    show:
+      birth-date: "Sinh nhật"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      text-edit: "Sửa đổi thông tin"
+    new:
+      title: "Tạo tài khoản"
+      button-text: "Lưu"
+    edit:
+      button-text: "Lưu"
+      title: "Cập nhật thông tin"
+    form:
+      placeholder-name: "Vui lòng nhập họ tên..."
+      placeholder-email: "Vui lòng nhập địa chỉ email..."
+      placeholder-phone: "Nhập số điện thoại..."
+      placeholder-address: "nhập địa chỉ..."
+      placeholder-password: "nhập mật khẩu"
+      placeholder-repassword: "xác nhận lại mật khẩu"
+      remove-image: "Xoá ảnh"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      placeholder-email: "Vui lòng nhập địa chỉ email..."
+      placeholder-password: "nhập mật khẩu"
+      text-remember: "lưu mật khẩu trên trình duyệt"
+
+
+
+
+
+

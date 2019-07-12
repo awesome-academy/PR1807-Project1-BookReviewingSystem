@@ -1,33 +1,162 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  controllers:
+    admin:
+      users:
+        update: "Profile Admin Update Success !"
+        logged: "Please Login"
+      sessions:
+        success: "Welcome to the Book review system!"
+        fail: "Invalid email/password combination"
+      chapters:
+        create: "Chapter create success !"
+        update: "Chapter Update success !"
+        destroy: "Chapter delete success !"
+      cates:
+        create: "Category create success !"
+        update: "Category Update success !"
+        destroy: "Category delete success !"
+      books:
+        create: "Book create success !"
+        update: "Book Update success !"
+        destroy: "Book delete success !"
+    sessions:
+      success: "Welcome to the Book review system!"
+      fail: "Invalid email/password combination"
+  admin:
+    users:
+      show:
+        birth-date: "Birth date"
+        address: "Address"
+        phone: "Phone Number"
+      edit:
+        button-text: "Save change"
+        title: "Edit Profile"
+        placeholder-name: "Your Name..."
+        placeholder-email: "E-mail Address..."
+        placeholder-phone: "Phone number..."
+        placeholder-address: "Address"
+        placeholder-password: "Enter Password"
+        placeholder-repassword: "Confirm Password"
+        remove-image: "Remove image"
+      index:
+        title: "All users"
+        avatar: "Avatar"
+        name: "Full Name"
+    sessions:
+      new:
+        title: "Log in"
+        placeholder-email: "E-mail Address..."
+        placeholder-password: "Enter Password"
+        text-remember: "Remember me on this computer"
+    chapters:
+      index:
+        add-chapter: "Add chapter book"
+        title: "Title"
+        content: "Content"
+        title-book: "Title Book"
+      new:
+        title: "Add-chapter-book"
+        button-text: "Add chapter"
+      edit:
+        title: "Update-chapter-book"
+        button-text: "Save chapter"
+      form:
+        select: "Select..."
+    cates:
+      index:
+        add-chapter: "Add Category"
+        title: "Title"
+      new:
+        title: "Add-category-book"
+        button-text: "Add Category"
+      edit:
+        title: "Update-category-book"
+        button-text: "Save "
+    books:
+      index:
+        add-book: "Add book"
+        title: "Title"
+        image: "Image"
+        desc: "Description"
+        category: "Category book"
+        author: "Author"
+      show:
+        author: "Author"
+        category: "Category book"
+        list-chapter: "List of chapters"
+      new:
+        title: "Add-book"
+        button-text: "Add Book"
+      edit:
+        title: "Update-book"
+        button-text: "Save "
+    book_pages:
+      home:
+        welcome: "Welcome to the Boook review system"
+  layouts:
+    client:
+      header:
+        placeholder-search: "Enter search keywords ..."
+        text-search: "Search"
+        choose-language: "Choose language"
+        text-logout: "Logout"
+      sidebar:
+        title-sidebar: "Book category"
+      footer:
+        copyright: "2019 Copyright © haotruonq"
+    admin:
+      header:
+        profile: "Profile"
+        setting:  "Setting"
+        logout: "Logout"
+        login: "Login"
+        choose-language: "Choose language"
+      sidebar:
+        dashboard: "Dashboard"
+        charts: "Charts"
+        books: "Books"
+        chapters: "Chapters"
+        categories: "Categories"
+        users: "Users"
+  books:
+    show:
+      author: "Author"
+      cate: "Book category"
+      view: "View"
+      list-pages: "List of chapters"
+  cates:
+    index:
+      alert: "<b>CODE</b> for later."
+      title-slogan: "FREE BOOKS LIBRARY"
+      sub-slogan: "Book Review is a non-profit project, aimed at sharing
+        free books for technology students."
+  users:
+    show:
+      birth-date: "Birth date"
+      address: "Address"
+      phone: "Phone Number"
+      text-edit: "Edit Profile"
+    new:
+      title: "Sign Up"
+      button-text: "Create my account"
+    edit:
+      button-text: "Save change"
+      title: "Edit Profile"
+    form:
+      placeholder-name: "Your Name..."
+      placeholder-email: "E-mail Address..."
+      placeholder-phone: "Phone number..."
+      placeholder-address: "Address"
+      placeholder-password: "Enter Password"
+      placeholder-repassword: "Confirm Password"
+      remove-image: "Remove image"
+  sessions:
+    new:
+      title: "Log in"
+      placeholder-email: "E-mail Address..."
+      placeholder-password: "Enter Password"
+      text-remember: "Remember me on this computer"
+
+
+
+

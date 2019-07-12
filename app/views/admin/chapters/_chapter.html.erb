@@ -1,7 +1,7 @@
 <tbody>
   <tr>
     <td><i class="fa fa-fighter-jet"></i><%= chapter.title  %></td>
-    <td><%= truncate(chapter.content , length: 55, omission: '... (còn nữa)') %></td>
+    <td><%= truncate(chapter.content , length: 55, omission: '...') %></td>
     <td><%= chapter.book.title %></td>
     <td colspan="2">
       <% if current_user.admin? %>

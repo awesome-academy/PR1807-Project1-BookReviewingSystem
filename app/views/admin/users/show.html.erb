@@ -5,9 +5,9 @@
       <h1>
         <%= @user.name %>
       </h1>
-      <p><i class="fa fa-birthday-cake"></i> Birth date: <%= @user.birthdate %></p>
-      <p> <i class="fa fa-map-marker"></i> Address: <%= @user.address %></p>
-      <p><i class="fa fa-mobile"></i> Phone: <%= @user.mobile %> </p>
+      <p><i class="fa fa-birthday-cake"></i> <%= t(".birth-date") %>: <%= @user.birthdate %></p>
+      <p> <i class="fa fa-map-marker"></i> <%= t(".address") %>: <%= @user.address %></p>
+      <p><i class="fa fa-mobile"></i> <%= t(".phone") %>: <%= @user.mobile %> </p>
     </section>
   </aside>
   <div class="col-md-4 col-lg-4">

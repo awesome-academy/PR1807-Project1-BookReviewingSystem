@@ -6,25 +6,32 @@
         <fieldset>
           <%= form_for @user  do |f| %>
             <div class="form-group ">
-              <%= f.text_field :name, class: "form-control input-lg", placeholder: "Your Name" %>
+              <%= f.text_field :name, class: "form-control input-lg",
+                placeholder: t(".placeholder-name") %>
             </div>
             <div class="form-group ">
-              <%= f.text_field :email, class: "form-control input-lg", placeholder: "E-mail Address" %>
+              <%= f.text_field :email, class: "form-control input-lg",
+                placeholder: t(".placeholder-email") %>
             </div>
             <div class="form-group ">
-              <%= f.text_field :mobile, class: "form-control input-lg", placeholder: "Phone number" %>
+              <%= f.text_field :mobile, class: "form-control input-lg",
+                placeholder: t(".placeholder-phone") %>
             </div>
             <div class="form-group ">
-              <%= f.text_field :address, class: "form-control input-lg", placeholder: "Phone number" %>
+              <%= f.text_field :address, class: "form-control input-lg",
+                placeholder: t(".placeholder-address") %>
             </div>
             <div class="form-group">
               <%= f.date_field :birthdate, class: 'form-control input-lg' %>
             </div>
             <div class="form-group ">
-              <%= f.password_field :password, class: "form-control input-lg", placeholder: "Enter Password" %>
+              <%= f.password_field :password, class: "form-control input-lg",
+                placeholder: t(".placeholder-password") %>
             </div>
             <div class="form-group ">
-              <%= f.password_field :password_confirmation, class: "form-control input-lg", placeholder: "Confirm Password" %>
+              <%= f.password_field :password_confirmation,
+                class: "form-control input-lg",
+                placeholder: t(".placeholder-repassword") %>
             </div>
             <div class ="form-group">
               <%= f.label :image , :class => "col-md-4 control-label" %>
@@ -37,8 +44,8 @@
                   <%= image_tag @user.image.url %>
                   <div>
                     <%= label_tag :remove_image do %>
-                      Remove image
                       <%= f.check_box :remove_image %>
+                      <%= t(".remove-image") %>
                     <% end %>
                   </div>
                 <% end %>

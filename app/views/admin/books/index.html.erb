@@ -1,18 +1,16 @@
 <%= link_to new_admin_book_path , class: "caption" do %>
-  <%= content_tag :i, "", class: "fa fa-plus-circle"%> Add Book
+  <%= content_tag :i, "", class: "fa fa-plus-circle"%> <%= t(".add-book") %>
 <% end %>
 <br>
-<br>
-<h6>Đã có ngần này cuốn sách rồi <i class="fa fa-level-down"></i></h6>
 <br>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Ảnh bìa</th>
-      <th>Mô tả ngắn</th>
-      <th>Danh mục sách</th>
-      <th>Tác giả</th>
+      <th><%= t(".title") %></th>
+      <th><%= t(".image") %></th>
+      <th><%= t(".desc") %></th>
+      <th><%= t(".category") %></th>
+      <th><%= t(".author") %></th>
       <th colspan="2"></th>
     </tr>
   </thead>
