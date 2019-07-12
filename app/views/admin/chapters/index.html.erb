@@ -1,14 +1,14 @@
 <%= link_to new_admin_chapter_path , class: "caption" do %>
-  <%= content_tag :i, "", class: "fa fa-plus-circle"%> Add chapter book
+  <%= content_tag :i, "", class: "fa fa-plus-circle"%> <%= t(".add-chapter") %>
 <% end %>
 <br>
 <br>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Title Book</th>
+      <th><%= t(".title") %></th>
+      <th><%= t(".content") %></th>
+      <th><%= t(".title-book") %></th>
       <th colspan="2"></th>
     </tr>
   </thead>

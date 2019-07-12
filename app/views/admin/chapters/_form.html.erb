@@ -15,7 +15,7 @@
     <div class="form-group">
       <%= f.label :book_id , class: "col-md-4 control-label" %>
       <div class="col-md-12">
-      <%= f.select :book_id, Book.all.collect {|p| [ p.title, p.id ] }, { prompt: "Select..." }, { class: "form-control", required: true } %>
+      <%= f.select :book_id, Book.all.collect {|p| [ p.title, p.id ] }, { prompt: t(".select") }, { class: "form-control", required: true } %>
       </div>
     </div>
     <div class="form-actions col-md-4">

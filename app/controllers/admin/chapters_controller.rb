@@ -15,8 +15,8 @@ class Admin::ChaptersController < ApplicationController
   def create
     @chapter = Chapter.new chapter_params
     if @chapter.save
-      flash[:success] = "Chapter create success !"
-      redirect_to admin_chapters_path @chapter
+      flash[:success] = I18n.t "controllers.admin.chapters.create"
+      redirect_to admin_chapters_path params[:locale], @chapter
     else
       render "new"
     end
@@ -29,8 +29,8 @@ class Admin::ChaptersController < ApplicationController
   def update
     @chapter = Chapter.find params[:id]
     if @chapter.update_attributes chapter_params
-      flash[:success] = "Chapter Update !"
-      redirect_to admin_chapters_path @chapter
+      flash[:success] = I18n.t "controllers.admin.chapters.update"
+      redirect_to admin_chapters_path params[:locale], @chapter
     else
       render "edit"
     end
@@ -38,7 +38,7 @@ class Admin::ChaptersController < ApplicationController
 
   def destroy
     Chapter.find(params[:id]).destroy
-    flash[:success] = "Chapter delete success !"
+    flash[:success] = I18n.t "controllers.admin.chapters.destroy"
     redirect_to admin_chapters_url
   end
 

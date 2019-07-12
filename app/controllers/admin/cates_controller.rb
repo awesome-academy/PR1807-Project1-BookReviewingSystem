@@ -15,8 +15,8 @@ class Admin::CatesController < ApplicationController
   def create
     @cate = Cate.new cate_params
     if @cate.save
-      flash[:success] = "Oh vừa có cái gì đó mới xuất hiện >`<"
-      redirect_to admin_cates_path @cate
+      flash[:success] = I18n.t "controllers.admin.cates.create"
+      redirect_to admin_cates_path params[:locale], @cate
     else
       render 'new'
     end
@@ -29,8 +29,8 @@ class Admin::CatesController < ApplicationController
   def update
     @cate = Cate.find params[:id]
     if @cate.update_attributes cate_params
-      flash[:success] = "ú oà biến hình thành công rồi :)) "
-      redirect_to admin_cates_path @cate
+      flash[:success] = I18n.t "controllers.admin.cates.update"
+      redirect_to admin_cates_path params[:locale], @cate
     else
       render "edit"
     end
@@ -38,7 +38,7 @@ class Admin::CatesController < ApplicationController
 
   def destroy
     Cate.find(params[:id]).destroy
-    flash[:success] = "1 tên cate đã bay màu theo cái búng tay của Thanos -_-"
+    flash[:success] = I18n.t "controllers.admin.cates.destroy"
     redirect_to admin_cates_url
   end
 

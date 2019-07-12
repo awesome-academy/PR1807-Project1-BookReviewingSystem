@@ -2,17 +2,25 @@
   <nav class="navbar bg-dark navbar-dark">
     <%= link_to "Booksreview", root_path , class: "logo" %>
     <form class="form-inline" action="/">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-success" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text" placeholder="<%= t('.placeholder-search') %>">
+      <button class="btn btn-success" type="submit"><%= t(".text-search") %></button>
     </form>
-
+    <div class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= t(".choose-language") %>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <%= link_to "English", { locale:"en" }, {class: "dropdown-item"} %>
+        <%= link_to "Tiếng Việt", { locale:"vi" }, {class: "dropdown-item"} %>
+      </div>
+    </div>
     <% if logged_in? %>
       <div class="box-user">
         <%= link_to current_user  do %>
           <%= content_tag :i, "", :class => "icon-user"%> <%= current_user.name %>
         <% end %> |
         <%= link_to logout_path, :method => :delete do %>
-        <%= content_tag :i, "", class: "fa fa-sign-out" %> Logout
+        <%= content_tag :i, "", class: "fa fa-sign-out" %> <%= t(".text-logout") %>
         <% end %>
       </div>
     <% else %>
