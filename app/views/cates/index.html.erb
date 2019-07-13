@@ -1,9 +1,9 @@
-<div class="alert alert-success" role="alert"><b>CODE</b> cho muôn đời sau.</div>
+<div class="alert alert-success" role="alert"><%=raw t(".alert") %></div>
 
 <div class="main-index">
-  <h2 class="text-center">THƯ VIỆN SÁCH MIỄN PHÍ</h2>
+  <h2 class="text-center"><%=raw t(".title-slogan") %></h2>
   <p class="text-center">
-     Bookreview là dự án phi lợi nhuận,nhằm mục đích chia sẻ sách miễn phí cho sinh viên công nghệ.
+     <%= t(".sub-slogan") %>
   </p>
   <ul class="row">
     <%= render @cates %>

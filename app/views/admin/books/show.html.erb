@@ -4,10 +4,18 @@
     </div>
     <div class="col-md-8">
       <h1 class="ebook_title text-primary"> <%= @book.title %> </h1>
-      <h5 class="">Tác giả : <%= @book.author %> </h5>
-      <h5 class="">Thể loại : <%= @book.cate.title %> </h5>
+      <h5 class=""><%= t(".author") %>: <%= @book.author %> </h5>
+      <h5 class=""><%= t(".category")%> : <%= @book.cate.title %> </h5>
     </div>
 </div>
 <hr>
-<h4>Danh sách các chương</h4>
+<h4><%= t(".list-chapter") %></h4>
 <hr>
+<ul class="chapter-list">
+  <% Chapter.all.each do |chapter| %>
+    <li>
+      <%= link_to chapter.title, chapter_path(chapter) %>
+    </li>
+    <hr>
+  <% end %>
+</ul>

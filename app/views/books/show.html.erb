@@ -11,16 +11,16 @@
         </div>
         <div class="col-md-8">
           <h1 class="ebook_title text-primary"> <%= @book.title %> </h1>
-          <h5 class="fontsize14"><i class="fa fa-user"></i> Tác giả : <%= @book.author %> </h5>
-          <h5 class="fontsize14"><i class="fa fa-book"></i> Thể loại : <%= @book.cate.title %> </h5>
-          <h5 class="fontsize14"><i class="fa fa-eye"></i> Lượt xem : 99999 </h5>
+          <h5 class="fontsize14"><i class="fa fa-user"></i> <%= t(".author") %> : <%= @book.author %> </h5>
+          <h5 class="fontsize14"><i class="fa fa-book"></i> <%= t(".cate") %> : <%= @book.cate.title %> </h5>
+          <h5 class="fontsize14"><i class="fa fa-eye"></i> <%= t(".view") %> : 99999 </h5>
         </div>
         <div class="col-md-12 description text-justify">
           <%=raw @book.description %>
         </div>
       </div>
       <hr>
-      <h4 class="list-pages">Danh sách các chương</h4>
+      <h4 class="list-pages"><%= t(".list-pages") %></h4>
       <hr>
       <ul class="chapter-list">
         <% Chapter.all.each do |chapter| %>

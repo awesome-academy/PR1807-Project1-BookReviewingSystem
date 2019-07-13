@@ -1,12 +1,12 @@
 <%= link_to new_admin_cate_path , class: "caption" do %>
-  <%= content_tag :i, "", class: "fa fa-plus-circle" %> Add Category
+  <%= content_tag :i, "", class: "fa fa-plus-circle" %> <%= t(".add-cate") %>
 <% end %>
 <br>
 <br>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t(".title") %></th>
       <th colspan="2"></th>
     </tr>
   </thead>

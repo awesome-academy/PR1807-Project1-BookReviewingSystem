@@ -17,7 +17,7 @@ class Admin::UsersController < ApplicationController
   def update
     @user = User.find params[:id]
     if @user.update_attributes user_params
-      flash[:success] = "Profile admin updated"
+      flash[:success] = I18n.t "controllers.admin.users.update"
       redirect_to admin_user_path @user
     else
       render "edit"
@@ -33,7 +33,7 @@ class Admin::UsersController < ApplicationController
        # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
-        flash[:danger] = "Please log in."
+        flash[:danger] = I18n.t "controllers.admin.users.logged"
         redirect_to admin_login_url
       end
     end
